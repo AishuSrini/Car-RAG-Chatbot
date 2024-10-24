@@ -1,4 +1,4 @@
-# 🚗 **RAG Chatbot for Car User Manuals**
+ # 🚗 **RAG Chatbot for Car User Manuals**
 
 The RAG Chatbot for Car User Manuals is an implementation of Retrieval-Augmented Generation (RAG) using LangChain. This application is designed to answer user questions related to a car's user manual by leveraging pre-processed text from the manual. The chatbot extracts relevant sections from the manual to provide accurate, context-aware responses about car operations, maintenance, and troubleshooting.
 
