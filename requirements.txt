@@ -1,0 +1,15 @@
+PyMuPDF==1.20.2
+nltk==3.6.2
+langchain==0.0.XX
+openai==0.XX.X
+azure-ai-ml==1.1.0
+azure-search-documents==11.3.0
+fitz
+azure-search-documents
+azure-core
+azure-search-documents>=11.4.0b1
+-U langchain-community
+-U langchain-openai
+--upgrade langchain
+
+
