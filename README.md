@@ -51,6 +51,11 @@ Assistant: [Bot Response Based on the Car Manual]
 ```
 To exit the chatbot, type exit or quit.
 
+**Demo:**
+
+**Watch a Demo Video:**
+[Watch the demo on YouTube] https://youtu.be/pirq7h0LoP8
+
 # **🧠 How it Works**
 **Text Extraction:** Uses a PDF parsing utility to extract text from the car user manual.
 
