@@ -1,20 +1,24 @@
- # 🚗 **RAG Chatbot for Car User Manuals**
+# 🚗 **RAG Chatbot for Car User Manuals using Langchain 🦜🔗**
 
-The RAG Chatbot for Car User Manuals is an implementation of Retrieval-Augmented Generation (RAG) using LangChain. This application is designed to answer user questions related to a car's user manual by leveraging pre-processed text from the manual. The chatbot extracts relevant sections from the manual to provide accurate, context-aware responses about car operations, maintenance, and troubleshooting.
+The RAG Chatbot for Car User Manuals project is an implementation of Retrieval-Augmented Generation (RAG) using LangChain. It leverages various services such as **Azure OpenAI models, Azure Search Service, and Python** to create an interactive chatbot that helps users query information from a car user manual. The chatbot extracts text from the manual, retrieves relevant sections based on user queries, and generates responses using advanced **AI models**.
 
 # 🌟 **Features**
 
-**PDF Text Extraction:** Extracts raw text from car user manuals in PDF format and cleans it for processing.
+ 🔧 **Python-based Application:** The chatbot is developed in Python, using libraries such as LangChain for natural language processing and question-answering tasks.
+ 
+ 🦜 **LangChain for QA Chain:** Implements LangChain to create a robust Question Answering (QA) system that generates relevant and accurate answers based on retrieved data.
 
-**Text Chunking:** Splits large bodies of text into manageable chunks to optimize embedding generation.
+📄 **PDF Text Extraction:** Extracts raw text from car user manuals in PDF format and cleans it for embedding and retrieval.
 
-**Embedding Generation:** Uses a pre-trained language model to generate embeddings from the text chunks, facilitating efficient retrieval.
+✂️  **Text Chunking:** Splits large sections of the car manual into smaller chunks to optimize the embedding process and improve retrieval accuracy.
 
-**Vector Store Integration:** Adds the embeddings to a vector store and sets up a retriever for querying relevant sections of the car manual.
+🤖 **Azure OpenAI Models:** Uses Azure OpenAI models to generate embeddings from the text chunks, facilitating efficient retrieval leveraging embed models and answer user queries with context-aware, natural language responses using chat models.
 
-**Question Answering Chain (QA Chain):** Utilizes LangChain to implement a QA system that retrieves relevant information from the vector store and generates accurate responses.
+🗃️ **Vector Store Integration:** Adds the generated embeddings to a vector store, which is integrated with **Azure Search Service**, allowing fast and relevant searches.
 
-**Interactive Chat Interface:** Provides a command-line interface (CLI) for users to interact with the chatbot in real-time and ask questions about car functionalities and troubleshooting.
+🔗 **Question Answering Chain (QA Chain):** Utilizes LangChain to implement a QA system that retrieves relevant information from the vector store and generates accurate responses.
+
+ 🗨️ **Interactive Chat Interface:** Provides a command-line interface (CLI) for users to interact with the chatbot in real-time and ask questions about car functionalities and troubleshooting.
 # **🛠️ Installation**
 # **Clone the repository:**
 ```
@@ -26,11 +30,23 @@ cd RAG-Chatbot-Car-Manual
 ```
 pip install -r requirements.txt
 ```
-# **Configure your environment (Optional):**
+# **Configure your environment :**
+Azure OpenAI API Configuration:
+Configure your Azure OpenAI API key in the config.py file:
 
-You can adjust configurations such as chunk size and overlap in the config.py file:
+```
+OPENAI_API_KEY = 'your_azure_openai_api_key_here'
+```
+**Azure Search Service Configuration:**
 
-# config.py
+Configure your Azure Search Service connection details in config.py:
+```
+AZURE_SEARCH_SERVICE_NAME = 'your_search_service_name'
+AZURE_SEARCH_INDEX_NAME = 'your_search_index_name'
+AZURE_SEARCH_ADMIN_KEY = 'your_admin_key_here'
+
+```
+You can also adjust configurations such as chunk size and overlap:
 
 ```
 CHUNK_SIZE = 500  # Size of each text chunk
@@ -50,18 +66,22 @@ User: How do I change a flat tire?
 Assistant: [Bot Response Based on the Car Manual]
 ```
 To exit the chatbot, type exit or quit.
-
 **Demo:**
 
 **Watch a Demo Video:**
-[Watch the demo on YouTube] https://youtu.be/pirq7h0LoP8
-
+[Watch the demo on YouTube] https://youtu.be/-1WQW3VURrc
 # **🧠 How it Works**
 **Text Extraction:** Uses a PDF parsing utility to extract text from the car user manual.
 
-**Embedding Generation:** A pre-trained language model generates vector embeddings for the text chunks, which are used for retrieval.
+**Embedding Generation:**  **Azure OpenAI models** are used to generate vector embeddings from the cleaned text chunks.
 
-**Retrieval Augmentation:** When the chatbot receives a question, it retrieves the most relevant sections of the car manual by comparing embeddings and uses that information to generate a context-aware response.
+**Retrieval Augmentation:** The chatbot utilizes **Azure Search Service** to efficiently retrieve the most relevant sections of the car manual based on user queries. This allows the chatbot to search through large documents quickly and accurately.
+
+**LangChain Integration:** LangChain is used to connect the retrieval system with the language model, enabling the chatbot to retrieve relevant data from the car manual based on user queries. The language model then uses this retrieved data to generate coherent and contextually relevant responses.
+  
+  ⛓️ **LangChain orchestrates** the process, ensuring the correct data is retrieved and fed into the language model.
+  
+   📝 **The prompt (provided to the language model)** ensures that the response is coherent and relevant to the user's question.
 
 #  **🛠 Example Questions**
 
@@ -90,5 +110,4 @@ Contributions to this project are welcome! To contribute, please follow these st
 # **📜 License**
 
 This project is released under the MIT License.
-
 
