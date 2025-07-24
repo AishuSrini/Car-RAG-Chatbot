@@ -66,7 +66,7 @@ User: How do I change a flat tire?
 Assistant: [Bot Response Based on the Car Manual]
 ```
 To exit the chatbot, type exit or quit.
-**Demo:**
+# 🤖 **Demo:**
 
 **Watch a Demo Video:**
 [Watch the demo on YouTube] https://youtu.be/-1WQW3VURrc
